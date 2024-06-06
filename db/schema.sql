@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS "heroHelper";
+CREATE DATABASE "heroHelper";
