@@ -1,16 +1,16 @@
 const sequelize = require('../config/index');
-const heroSeed = require('./heroData');
-const powerSeed = require('./powerData');
-const requestSeed = require('./requestData');
-const reviewSeed = require('./reviewData');
+const seedHeroes = require('./heroData');
+const seedPowers = require('./powerData');
+const seedRequests = require('./requestData');
+const seedReviews = require('./reviewData');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
 
-    await heroSeed();
-    await powerSeed();
-    await requestSeed();
-    await reviewSeed();
+    await seedHeroes();
+    await seedPowers();
+    await seedRequests();
+    await seedReviews();
 
     process.exit(0);
 }
