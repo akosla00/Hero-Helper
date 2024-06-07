@@ -2,7 +2,7 @@ const { Users } = require('../Models');
 
 module.exports = {
     add: async (req, res) => {
-		const userData = await User.create(req.body);
+		const userData = await Users.create(req.body);
 		req.session.save(() => {
 			req.session.user_id = userData.id;
 			req.session.logged_in = true;

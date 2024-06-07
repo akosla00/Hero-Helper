@@ -9,6 +9,7 @@ Heroes.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
+            autoIncrement: true,
         },
         heroName: {
             type: DataTypes.STRING(30),
@@ -28,7 +29,7 @@ Heroes.init(
         },
         powersId: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             references: {
                 model: 'powers',
                 key: 'id',

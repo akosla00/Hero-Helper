@@ -1,4 +1,4 @@
-const { Heroes } = require('../models');
+const { Heroes } = require('../Models');
 
 const heroData = [
     {
@@ -6,12 +6,12 @@ const heroData = [
         firstName: 'Clark',
         lastName: 'Kent',
         description: 'Super Man comes from the planet Krypton and is widely regarded as one of our strongest heroes.',
-        powersId: 2,
+        // powersId: 2,
         powerLevel: 'S',
         locationBase: 'Metropolis',
         travelSpeed: 'Plane',
-        registeredBy: '',
-        requestId: '',
+        // registeredBy: '',
+        // requestId: '',
     }
 ]
 

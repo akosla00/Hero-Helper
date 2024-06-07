@@ -1,4 +1,4 @@
-const { Requests } = require('../models');
+const { Requests } = require('../Models');
 
 const requestData = [
     {
