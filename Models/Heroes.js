@@ -44,7 +44,7 @@ Heroes.init(
         },
         registeredBy: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
             references: {
                 model: 'user',
                 key: 'id',
