@@ -1,17 +1,19 @@
 
-
-<form id="login">
-    <h2>login</h2>
-    <div class="mb-3">
-        <label for="inputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
-    </div>
-    <div class="mb-3">
-        <label for="inputPasword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPasword">
-    </div>
-    <button type="submit" class="btn btn-primary">Login</button>
-</form>
+<div id="login-container" class="d-flex">
+    <form id="login" class="justify-content-center align-items-center">
+        <h2>login</h2>
+        <div class="mb-3">
+            <label for="inputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="inputPasword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPasword">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <a href="/sign-up"><p>Don't have account? sign up here</p></a>
+    </form>
+</div>
 
 
 <script src="/js/login.js"></script>

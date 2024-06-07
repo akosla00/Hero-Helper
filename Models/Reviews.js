@@ -1,5 +1,5 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = require('');
+const sequelize = require('../config/index');
 
 class Reviews extends Model {};
 
@@ -9,6 +9,7 @@ Reviews.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
+            autoIncrement: true,
         },
         title: {
             type: DataTypes.STRING(30),
