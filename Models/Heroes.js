@@ -27,7 +27,7 @@ Heroes.init(
             allowNull: false,
         },
         powersId: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'powers',
