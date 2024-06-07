@@ -49,4 +49,4 @@ Users.init(
     }
 );
 
-module.exports = User;
+module.exports = Users;
