@@ -1,5 +1,5 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = require('');
+const sequelize = require('../config/index');
 
 class Heroes extends Model {};
 
@@ -9,6 +9,7 @@ Heroes.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
+            autoIncrement: true,
         },
         heroName: {
             type: DataTypes.STRING(30),
@@ -27,8 +28,8 @@ Heroes.init(
             allowNull: false,
         },
         powersId: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.INTEGER,
+            allowNull: true,
             references: {
                 model: 'powers',
                 key: 'id',
