@@ -24,10 +24,6 @@ Users.init(
             type: DataTypes.STRING(30),
             allowNull: false,
         },
-        location: {
-            type: DataTypes.STRING(50),
-            allowNull: false,
-        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
