@@ -5,7 +5,7 @@ const router = require('express').Router();
 
 router.route('/').post(userController.add).get(userController.all);
 
-// router.route('/login').post(userController.login);
-// router.route('/logout').get(userController.logout);
+router.route('/login').post(userController.login);
+router.route('/logout').get(userController.logout);
 
 module.exports = router;
