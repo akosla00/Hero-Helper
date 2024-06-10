@@ -23,6 +23,10 @@ Requests.init(
             type: DataTypes.STRING(1),
             allowNull: false,
         },
+        location: {
+            type: DataTypes.STRING(50),
+            allowNull: false,
+        },
         userId: {
             type: DataTypes.INTEGER,
             allowNull: false,
