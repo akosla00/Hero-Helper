@@ -44,8 +44,12 @@ Reviews.belongsTo(Heroes, {
     foreignKey: 'hero_requested_id',
 });
 
+// Powers.hasMany(Heroes, {
+//     foreignKey: 'powers_id',
+// });
 
-
-
+// Heroes.belongsToMany(Powers, {
+//     foreignKey: 'powers_id',
+// });
 
 module.exports = { Users, Heroes, Powers, Requests, Reviews };

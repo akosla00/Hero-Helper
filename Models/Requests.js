@@ -1,5 +1,5 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = require('');
+const sequelize = require('../config/index');
 
 class Requests extends Model {};
 
@@ -9,6 +9,7 @@ Requests.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
+            autoIncrement: true,
         },
         title: {
             type: DataTypes.STRING(30),
@@ -20,6 +21,10 @@ Requests.init(
         },
         powerLevel: {
             type: DataTypes.STRING(1),
+            allowNull: false,
+        },
+        location: {
+            type: DataTypes.STRING(50),
             allowNull: false,
         },
         userId: {
