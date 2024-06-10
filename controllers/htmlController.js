@@ -1,12 +1,9 @@
 module.exports = {
-	homeroute: (req, res) => {
+	home: (req, res) => {
 		res.render('home');
 	},
-	addComment: (req, res) => {
+	login: (req, res) => {
 		//do work as a post create a new comment
-		res.render('commentAdded');
-	},
-    login: (req, res) => {
-        res.render('login');
-    }
+		res.render('login');
+	}
 };
