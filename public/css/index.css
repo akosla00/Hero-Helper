@@ -87,14 +87,14 @@ nav ul {
 }
 
 /* Section Styles */
-#home, #hero, #about {
+#home, #hero, #about, #requests{
     font-family: "bebas neue";
     font-size: 40px;
     color: rgb(241, 241, 248);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-#home:hover, #hero:hover, #about:hover {
+#home:hover, #hero:hover, #about:hover, #requests:hover {
     color: #ff6347; /* Hover color */
     transform: scale(1.1); /* Slightly increase size on hover */
 }
@@ -146,7 +146,7 @@ i.fly-in-out {
         box-shadow: none;
     }
     100% {
-        color: transparent; 
+        color: transparent;
         transform: scale(0) translate3d(0, 2000px, 0);
         background: rgba(255, 255, 255, 0.3);
         box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
