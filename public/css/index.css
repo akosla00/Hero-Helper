@@ -1,4 +1,4 @@
-/* Gio's form styling */
+/*DOWN Gio's form styling */
 
 #login-container {
     background-color: #EBEBEB;
@@ -29,9 +29,6 @@
     transform: translate(0, -2px);
 }
 
-
-
-
 #login-flex hr {
     color: white;
     border-width: 4px;
@@ -41,7 +38,7 @@
     color: white;
 }
 
-/* Gio's form styling */
+/*UP Gio's form styling */
 
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Syncopate");
