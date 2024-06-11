@@ -1,3 +1,45 @@
+/*DOWN Gio's form styling */
+
+#login-container {
+    background-color: #EBEBEB;
+    width: 100%;
+    height: 100vh;
+}
+#login-flex {
+    background: rgb(0,170,217);
+    background: linear-gradient(190deg, rgba(0,170,217,1) 0%, rgba(9,90,125,1) 100%);
+    max-width: 400px;
+    min-width: 200px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+#login-flex button {
+    margin: 0 auto;
+    background: rgb(255,237,148);
+    background: linear-gradient(180deg, rgba(255,237,148,1) 0%, rgba(255,209,71,1) 18%, rgba(219,124,46,1) 100%);
+    width: 100%;
+    color: black;
+    transition: 0.3s;
+}
+
+#login-flex button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: translate(0, -2px);
+}
+
+#login-flex hr {
+    color: white;
+    border-width: 4px;
+}
+
+#login-flex a {
+    color: white;
+}
+
+/*UP Gio's form styling */
+
 /* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Syncopate");
 
