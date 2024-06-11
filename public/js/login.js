@@ -3,15 +3,19 @@ const loginFormHandler = async (event) => {
   
     const email = document.querySelector('#inputEmail').value.trim();
     const password = document.querySelector('#inputPasword').value.trim();
-  
+    const emailPassword = {
+      email: email,
+      password: password
+    };
+
     if (email && password) {
 
       const response = await fetch('/api/users/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify(emailPassword),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+      
       if (response.ok) {
         document.location.replace('/');
       } else {
@@ -21,5 +25,5 @@ const loginFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.login-flex')
+    .querySelector('#login')
     .addEventListener('submit', loginFormHandler);
