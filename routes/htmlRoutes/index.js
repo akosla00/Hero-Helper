@@ -3,6 +3,7 @@ const htmlContoller = require('../../controllers/htmlController');//This connect
 
 router.route('/login').get(htmlContoller.login);
 router.route('/sign-up').get(htmlContoller.signUp);
+router.route('/map').get(htmlContoller.map);
 router.route('/').get(htmlContoller.home);//landing page that will display your homepage
 
 module.exports = router;
