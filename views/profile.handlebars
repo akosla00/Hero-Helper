@@ -1,8 +1,22 @@
+<header>
+    <nav class="container-fluid help">
+        <ul>
+            <li><a href="/" id="home">Home</a></li>
+            <li><a href="/hero" id="hero">Heroes</a></li>
+            <li><a href="/about" id="about">About</a></li>
+        </ul>
+        {{#if logged_in}}
+        <a href="/logout"><button id="logout" type="button" class="btn btn-primary">Logout</button></a>
+        {{else}}
+        <a href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+        {{/if}}
+    </nav>
+</header>
 <div id="main-background" class="container ">
     <div class="row">
         <div class="col-4">
             <div id="profile-image-container">
-                <img src="https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_square.jpg" alt="">
+                <img src="https://t3.ftcdn.net/jpg/03/58/90/78/360_F_358907879_Vdu96gF4XVhjCZxN2kCG0THTsSQi8IhT.jpg" alt="">
             </div>
         </div>
         <div class="col">
@@ -13,7 +27,7 @@
     </div>
     <div class="row text-center">
         <div class="col">
-            <button type="button" class="btn btn-primary">Request Now</button>
+            <a href="/request"><button type="button" class="btn btn-primary">Request Now</button></a>
         </div>
         <div class="col">
             <h4>Requests: 2</h4>
