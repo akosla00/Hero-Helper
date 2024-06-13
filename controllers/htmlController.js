@@ -8,4 +8,7 @@ module.exports = {
     signUp: (req, res) => {
         res.render('signUp');
     },
+	map: (req, res) => {
+		res.render('map');
+	},
 };
