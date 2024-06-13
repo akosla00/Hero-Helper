@@ -16,7 +16,7 @@ map.setMaxBounds(bounds);
 // an arbitrary start will always be the same
 // only the end or destination will change
 const start = [-122.662323, 45.523751];
-
+const end = [-122.662323, 46.523751];
 // this is where the code for the next step will go
 
 // create a function to make a directions request
@@ -31,6 +31,20 @@ async function getRoute(end) {
     const json = await query.json();
     const data = json.routes[0];
     const route = data.geometry.coordinates;
+  
+    console.log(data)
+    console.log(route) 
+    const instructions = document.getElementById('instructions');
+const steps = data.legs[0].steps;
+
+let tripInstructions = '';
+for (const step of steps) {
+  tripInstructions += `<li>${step.maneuver.instruction}</li>`;
+}
+instructions.innerHTML = `<p><strong> Your hero is : ${Math.floor(
+  data.duration / 60
+)} min Away 🦸 </strong></p><ol>${tripInstructions}</ol>`;
+
     const geojson = {
       type: 'Feature',
       properties: {},
@@ -97,4 +111,53 @@ async function getRoute(end) {
       }
     });
     // this is where the code from the next step will go
+
   });
+
+  map.on('click', (event) => {
+    const coords = Object.keys(event.lngLat).map((key) => event.lngLat[key]);
+    const end = {
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'Feature',
+          properties: {},
+          geometry: {
+            type: 'Point',
+            coordinates: coords
+          }
+        }
+      ]
+    };
+    if (map.getLayer('end')) {
+      map.getSource('end').setData(end);
+    } else {
+      map.addLayer({
+        id: 'end',
+        type: 'circle',
+        source: {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: [
+              {
+                type: 'Feature',
+                properties: {},
+                geometry: {
+                  type: 'Point',
+                  coordinates: coords
+                }
+              }
+            ]
+          }
+        },
+        paint: {
+          'circle-radius': 10,
+          'circle-color': '#f30'
+        }
+      });
+    }
+    getRoute(coords);
+  });
+
+  // get the sidebar and add the instructions
