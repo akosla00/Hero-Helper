@@ -6,7 +6,7 @@ module.exports = {
             title: req.body.title,
             description: req.body.description,
             powerLevel: req.body.powerLevel,
-            location: req.body.locaiton,
+            location: req.body.location,
             userId: req.session.userId
         };
         try {
