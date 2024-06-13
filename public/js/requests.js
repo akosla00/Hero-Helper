@@ -18,14 +18,14 @@ const requestForm = async (event) => {
     const response = await fetch('/api/requests', {
         method: 'POST',
         headers: {
-            'Content-Type': 'applicaiton/json'
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(newRequest)
     });
 
     if (response.ok) {
         console.log('Created a new request! TEST');
-        document.location.replace('/');
+        // document.location.replace('/');
     } else {
         alert('Request failed');
     }

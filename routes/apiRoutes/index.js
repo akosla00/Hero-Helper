@@ -6,7 +6,7 @@ const requestRoutes = require('./requestRoutes');
 
 router.use('/user', userRoutes);
 router.use('/hero', heroRoutes);
-router.use('/requests,', requestRoutes);
+router.use('/requests', requestRoutes);
 
 
 module.exports = router;
