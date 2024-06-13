@@ -25,12 +25,12 @@ const requestForm = async (event) => {
 
     if (response.ok) {
         console.log('Created a new request! TEST');
-        document.location.replace('/requests');
+        document.location.replace('/');
     } else {
-        alert('Failed to log in');
+        alert('Request failed');
     }
 };
 
 document
-    .querySelector('#newRequestForm')
-    .addEventListener('submit', requestForm);
+    .querySelector('#submit')
+    .addEventListener('click', requestForm);

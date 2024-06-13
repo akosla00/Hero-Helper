@@ -6,13 +6,18 @@
             <li><a class="navFont">About</a></li>
             <li><a class="navFont" href="/requests">Requests</a></li>
         </ul>
-        <a href="/login"><button type="button" class="btn" id="poop">Login</button></a>
+        {{#if logged_in}}
+        <a href="/logout"><button id="logout" type="button" class="btn btn-primary">Logout</button></a>
+        {{else}}
+        <a href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+        {{/if}}
     </nav>
 </header>
     <div class="request container">
         <main>
             <div class="content">
-                <h1 id="hr">       Request Today        Save Tomorrow</h1>
+             <h1 id="hr"> Request Today  Save Tomorrow</h1>
+
             </div>
         </main>
     </div>
