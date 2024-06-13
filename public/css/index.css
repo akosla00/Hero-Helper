@@ -5,9 +5,11 @@
     width: 100%;
     height: 100vh;
 }
+
+
 #login-flex {
-    background: rgb(0,170,217);
-    background: linear-gradient(190deg, rgba(0,170,217,1) 0%, rgba(9,90,125,1) 100%);
+    background: rgb(0, 170, 217);
+    background: linear-gradient(190deg, rgba(0, 170, 217, 1) 0%, rgba(9, 90, 125, 1) 100%);
     max-width: 400px;
     min-width: 200px;
     padding: 20px;
@@ -17,15 +19,15 @@
 
 #login-flex button {
     margin: 0 auto;
-    background: rgb(255,237,148);
-    background: linear-gradient(180deg, rgba(255,237,148,1) 0%, rgba(255,209,71,1) 18%, rgba(219,124,46,1) 100%);
+    background: rgb(255, 237, 148);
+    background: linear-gradient(180deg, rgba(255, 237, 148, 1) 0%, rgba(255, 209, 71, 1) 18%, rgba(219, 124, 46, 1) 100%);
     width: 100%;
     color: black;
     transition: 0.3s;
 }
 
 #login-flex button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transform: translate(0, -2px);
 }
 
@@ -44,14 +46,16 @@
 @import url("https://fonts.googleapis.com/css?family=Syncopate");
 
 /* Global Styles */
-html, body {
+html,
+body {
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
     margin: 0;
     height: 100%;
     width: 100%;
     display: table;
-    background: url("http://neilcarpenter.com/demos/asfalt.png") repeat; /* subtlepatterns.com */
+    background: url("http://neilcarpenter.com/demos/asfalt.png") repeat;
+    /* subtlepatterns.com */
 }
 
 body {
@@ -60,7 +64,7 @@ body {
 }
 
 /* Header Styles */
-header {
+#homeHeader {
     width: 100%;
     margin-bottom: 20px;
     background: linear-gradient(to right, rgb(255, 165, 0), rgb(255, 215, 0));
@@ -84,16 +88,26 @@ nav ul {
 }
 
 /* Section Styles */
-#home, #hero, #about {
+.navFont {
     font-family: "bebas neue";
     font-size: 40px;
     color: rgb(241, 241, 248);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-#home:hover, #hero:hover, #about:hover {
-    color: #ff6347; /* Hover color */
-    transform: scale(1.1); /* Slightly increase size on hover */
+#poop {
+    font-family: "bebas neue";
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navFont:hover,
+#poop:hover {
+    color: #ff6347;
+    /* Hover color */
+    transform: scale(1.1);
+    /* Slightly increase size on hover */
 }
 
 /* Container Styles */
@@ -135,18 +149,46 @@ i.fly-in-out {
         box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
         border-radius: 50%;
     }
-    15%, 85% {
+
+    15%,
+    85% {
         color: rgba(255, 255, 255, 0.8);
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         transform: scale(1) translate3d(0, 0, 0);
         background: transparent;
         box-shadow: none;
     }
+
     100% {
-        color: transparent; 
+        color: transparent;
         transform: scale(0) translate3d(0, 2000px, 0);
         background: rgba(255, 255, 255, 0.3);
         box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.2);
         border-radius: 50%;
     }
+}
+
+/* Gio's profile page CSS BELOW */
+#main-background {
+    background-color: white;
+}
+
+
+
+#profile-image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+#profile-image-container img {
+    width: 100%;
+}
+
+
+.user-request {
+    background-color: rgb(191, 235, 255);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
 }
