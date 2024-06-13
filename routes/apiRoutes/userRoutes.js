@@ -5,6 +5,8 @@ const router = require('express').Router();
 
 router.route('/').post(userController.add).get(userController.all);
 
+router.route('/profile').get(withAuth, userController.me);
+
 router.route('/login').post(userController.login);
 router.route('/logout').get(userController.logout);
 

@@ -13,7 +13,7 @@ module.exports = {
 	login: async (req, res) => {
 		try {
 			// Find the user who matches the posted e-mail address
-			const userData = await User.findOne({ where: { email: req.body.email } });
+			const userData = await Users.findOne({ where: { email: req.body.email } });
 
 			if (!userData) {
 				res.status(400).json({ message: 'Incorrect email or password, please try again' });
@@ -36,7 +36,7 @@ module.exports = {
 				res.json({ user: userData, message: 'You are now logged in!' });
 			});
 		} catch (err) {
-			res.status(400).json(err);
+			res.status(400).json(err.message);
 		}
 	},
 	logout: (req, res) => {
@@ -52,5 +52,9 @@ module.exports = {
     all: async (req, res) => {
         const userData = await Users.findAll();
         res.json(userData);
-    }
+    },
+	me: async (req, res) => {
+		const userData = await User.findByPk(req.session.user_id);
+		res.json(userData);
+	}
 };
