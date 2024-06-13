@@ -18,7 +18,7 @@ map.setMaxBounds(bounds);
 const start = [-122.662323, 45.523751];
 const end = [-122.662323, 46.523751];
 // this is where the code for the next step will go
-
+    
 // create a function to make a directions request
 async function getRoute(end) {
     // make a directions request using cycling profile
@@ -161,3 +161,5 @@ instructions.innerHTML = `<p><strong> Your hero is : ${Math.floor(
   });
 
   // get the sidebar and add the instructions
+
+
