@@ -1,9 +1,10 @@
-<header>
+<header id="homeHeader">
     <nav class="container-fluid help">
         <ul>
-            <li><a id="home">Home</a></li>
-            <li><a id="hero">Heroes</a></li>
-            <li><a id="about">About</a></li>
+            <li><a href="/" class="navFont">Home</a></li>
+            <li><a href="/hero" class="navFont">Heros</a></li>
+            <li><a href="/about" class="navFont">About</a></li>
+            <li><a href="/requests" class="navFont">Requests</a></li>
         </ul>
         {{#if logged_in}}
         <a href="/logout"><button id="logout" type="button" class="btn btn-primary">Logout</button></a>
@@ -17,6 +18,33 @@
             <div class="content">
              <h1 id="hr"> Request Today  Save Tomorrow</h1>
           
+            </div>
+        </main>
+    </div>
+
+<script src="/js/scripts.js"></script>
+<header>
+    <nav class="container-fluid help">
+        <ul>
+            <li><a href="/" id="home">Home</a></li>
+            <li><a href="/hero" id="hero">Heroes</a></li>
+            <li><a href="/about" id="about">About</a></li>
+            <li><a href="/profile" id="about">Profile</a></li>
+        </ul>
+        {{#if logged_in}}
+        <a href="/logout"><button id="logout" type="button" class="btn btn-primary">Logout</button></a>
+        {{else}}
+        <a href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+        {{/if}}
+    </nav>
+</header>
+    <div class="request container">
+        <main>
+            <div class="content">
+             <h1 id="hr"> Request Today  Save Tomorrow</h1>
+            </div>
+            <div>
+                <a href="/request"><button id="main-button" type="button" class="btn btn-primary">Request Now</button></a>
             </div>
         </main>
     </div>
