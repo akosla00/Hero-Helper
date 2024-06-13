@@ -1,0 +1,37 @@
+<div class="requestsContainer" id="newRequestForm">
+    <header id="requestsHeader">
+        <h3 id="headerFont">How can we assist you?</h3>
+    </header>
+    <form>
+        <div class="form-group mb-3 text-center fs-3">
+            <label for="title">Please title your request</label>
+            <input type="email" class="form-control requestsBox text-center" id="title">
+        </div>
+        <div class="mb-3 text-center fs-3">
+            <label for="message-text" class="col-form-label">Describe how we can best assist
+                you?</label>
+            <textarea class="form-control requestsBox text-center" id="description"></textarea>
+        </div>
+        <div class="mb-5 text-center fs-3">
+            <label for="location" class="col-form-label">Where are you located?</label>
+            <input type="text" class="form-control requestsBox text-center" id="location">
+        </div>
+        <div class="mb-4">
+            <select class="form-select text-center fs-3 requestsBox" aria-label="Default select example"
+                id="powerLevel">
+                <option selected> CHOOSE A POWER LEVEL!</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="mb-3 d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-dark" id="submit">Submit your request</button>
+        </div>
+
+    </form>
+</div>
+
+<script src="/js/requests.js"></script>
