@@ -11,4 +11,7 @@ module.exports = {
 	map: (req, res) => {
 		res.render('map');
 	},
+	profile: (req, res) => {
+		res.render('profile');
+	},
 };
