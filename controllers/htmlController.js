@@ -11,6 +11,9 @@ module.exports = {
     signUp: (req, res) => {
         res.render('signUp');
     },
+    requests: (req, res) => {
+        res.render('requests');
+    },
 	map: (req, res) => {
 		res.render('map');
 	},
