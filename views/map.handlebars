@@ -1,27 +1,34 @@
-<header>Gps </header>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Using a Map Id</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <meta charset="utf-8" />
+    <title>Getting started with the Mapbox Directions API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="./index.js"></script>
+      #map {
+        width: 25%;
+        height: 25%;
+      }
+    </style>
   </head>
   <body>
     <div id="map"></div>
-
-    <!-- 
-      The `defer` attribute causes the script to execute after the full HTML
-      document has been parsed. For non-blocking uses, avoiding race conditions,
-      and consistent behavior across browsers, consider loading using Promises. See
-      https://developers.google.com/maps/documentation/javascript/load-maps-js-api
-      for more information.
-      -->
-     <script src="/js/mapscripts.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKaMrNmjUVdVhqWP-1yi4M87I-i8Plxho
-v=weekly"
-      defer
-    ></script>
+    <script src="/js/map.js">
+      // this is where the code for the next step will go
+    </script>
   </body>
 </html>
