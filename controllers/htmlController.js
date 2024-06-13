@@ -1,4 +1,5 @@
 // calling the database to get info to display usind hadle bars
+const { request } = require('express');
 const { Requests } = require('../Models')
 
 module.exports = {
@@ -16,6 +17,9 @@ module.exports = {
     },
 	map: (req, res) => {
 		res.render('map');
+	},
+	requests: (req, res) => {
+		res.render('requests');
 	},
 	profile: async (req, res) => {
         // const userId = 1
