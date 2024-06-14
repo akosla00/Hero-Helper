@@ -167,7 +167,7 @@ i.fly-in-out {
     }
 }
 
-/* Alec's Request Styling */
+/* Alec's Styling */
 
 .requestsContainer {
     background-color: rgb(255, 165, 0);
@@ -189,6 +189,22 @@ i.fly-in-out {
     padding: 20px;
     margin: 10px;
     border-radius: 12px;
+}
+
+.logoutCard {
+    background-color: rgb(255, 165, 0);
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    height: 50%;
+}
+
+#logoutText {
+    font-family: "bebas neue";
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, transform 0.3s ease;
 }
 
 /* Skyler styling */
@@ -264,7 +280,7 @@ i.fly-in-out {
 }
 #aboutContainer {
     background-color: rgb(255, 165, 0);
-        width: 75%;
+        width: 50%;
         height: 80vh;
     margin-left: auto;
     margin-right: auto;
@@ -276,5 +292,5 @@ i.fly-in-out {
 .aboutInfo {
     margin-left: auto;
     margin-right: auto;
-    width: 55%;
+    width: 60%;
 }
