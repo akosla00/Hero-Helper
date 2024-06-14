@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Getting started with the Mapbox Directions API</title>
+    <title>Superheroes Map Database</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.1-dev/mapbox-gl-geocoder.min.js"></script>
@@ -14,28 +14,100 @@
       href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css"
       rel="stylesheet"
     />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
       body {
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
+        background: #0f6bf7;
+        color: rgb(19, 15, 221);
+        font-family: 'Syncopate', Helvetica, Arial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+         background-image: url('../images/earth-background-.jpg');
+      }
+
+      .navbar-custom {
+        background-color: #FFD147; /* Yellow color */
+        width: 100%;
+        
+      }
+
+      .navbar-custom .navbar-brand,
+      .navbar-custom .nav-link {
+        color: #095A7D; /* Dark blue color */
+        font-family: 'Syncopate', Helvetica, Arial;
       }
 
       #map {
         width: 80%;
         height: 60%;
+        border: 5px solid #e5e90e; /* Superhero red border */
+        box-shadow: 0 0 20px rgba(245, 242, 242, 0.7);
+        margin-top: 60px; /* To prevent overlap with navbar */
+      }
+
+      #instructions {
+        width: 80%;
+        max-height: 20%;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #1e1e1e;
+        color: white;
+        overflow-y: auto;
+        border: 2px solid #DB7C2E; /* Orange border */
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        font-family: 'Syncopate', Helvetica, Arial;
+      }
+
+      .call {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .btn-danger {
+        background-color: #C72E30;
+        border-color: #C72E30;
+        font-size: 1.2em;
+        font-weight: bold;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+      }
+
+      .btn-danger:hover {
+        background-color: #DB7C2E;
+        border-color: #DB7C2E;
       }
     </style>
-  </head>
-  <body>
-   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">Superheroes Database</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+           
+        </div>
+    </nav>
+
     <div id="map"></div>
-     <div id="instructions"></div>
-    <script src="/js/map.js">
-      // this is where the code for the next step will go
-    </script>
-  </body>
+    <div id="instructions"></div>
+    <div class="call">
+        <button type="button" class="btn btn-danger" onclick="getLocation()">Location Request Call</button>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/map.js"></script>
+</body>
 </html>
