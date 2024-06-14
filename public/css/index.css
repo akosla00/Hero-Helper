@@ -232,3 +232,11 @@ i.fly-in-out {
     color: rgb(241, 241, 248);
     transition: color 0.3s ease, transform 0.3s ease;
 }
+
+#profile-background {
+    background-color: white;
+}
+
+.user-request {
+    background-color: aquamarine;
+}
