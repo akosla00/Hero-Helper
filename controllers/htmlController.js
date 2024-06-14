@@ -50,4 +50,18 @@ module.exports = {
         // res.render('profile', { requests, logged_in: req.session.logged_in});
         res.render('profile'); 
 	},
+    oneHero: async (req, res) => {
+        try {
+            const heroData = await Heroes.findByPk(req.params.id);
+            if (!heroData) {
+                res.status(404).json({ message: 'No hero with this id!'});
+                return;
+            }
+
+            const hero = heroData.get({ plain: true });
+            res.render('oneHero', hero);
+        } catch (error) {
+            res.status(500).json(error);
+        }
+    }
 };

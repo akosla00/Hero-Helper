@@ -8,5 +8,9 @@ module.exports = {
     all: async (req, res) => {
         const heroData = await Heroes.findAll();
         res.json(heroData);
+    },
+    one: async (req, res) => {
+        const heroData = await Heroes.findByPk(req.params.id);
+        res.json(heroData);
     }
 };
