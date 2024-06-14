@@ -26,7 +26,7 @@ module.exports = {
             if (nameA > nameB) {
               return 1;
             }
-          
+
             // names must be equal
             return 0;
           });
@@ -48,6 +48,9 @@ module.exports = {
         // console.log(requests)
         // console.log(req.session.logged_in);
         // res.render('profile', { requests, logged_in: req.session.logged_in});
-        res.render('profile'); 
+        res.render('profile');
 	},
+  about: (req, res) => {
+    res.render('about');
+  },
 };
