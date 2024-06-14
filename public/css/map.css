@@ -8,8 +8,11 @@ html{
     box-sizing: inherit;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
-    
+    background-image: url("../images/superhero.png");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }

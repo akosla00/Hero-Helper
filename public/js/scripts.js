@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var paragraph = document.getElementById('hr');
+    var paragraph = document.getElementById('anime');
   
     function textEffect(animationName) {
-        var text = paragraph.innerHTML,
+        var text = paragraph.textContent,
             chars = text.length,
             newText = '';
   
