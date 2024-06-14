@@ -26,7 +26,7 @@ module.exports = {
             if (nameA > nameB) {
               return 1;
             }
-          
+
             // names must be equal
             return 0;
           });
@@ -50,4 +50,7 @@ module.exports = {
         // res.render('profile', { requests, logged_in: req.session.logged_in});
         res.render('profile', {cleanUserData , requests}); 
 	},
+  about: (req, res) => {
+    res.render('about');
+  },
 };

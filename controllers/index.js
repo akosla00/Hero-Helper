@@ -1,5 +1,5 @@
-const htmlContoller = require('./htmlController');
+const htmlController = require('./htmlController');
 const userController = require('./userController');
 const heroController = reuqire('./heroController');
 
-module.exports = { htmlContoller, userController, heroController };
+module.exports = { htmlController, userController, heroController };

@@ -262,3 +262,19 @@ i.fly-in-out {
 .user-request {
     background-color: rgb(213, 238, 255);
 }
+#aboutContainer {
+    background-color: rgb(255, 165, 0);
+        width: 75%;
+        height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    margin-top: 5%;
+
+}
+
+.aboutInfo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+}
