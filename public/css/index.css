@@ -199,3 +199,10 @@ i.fly-in-out {
     font-size: large;
     text-transform: uppercase;
 }
+
+.loginHome {
+    font-family: "bebas neue";
+        font-size: 25px;
+        color: rgb(241, 241, 248);
+        transition: color 0.3s ease, transform 0.3s ease;
+}
