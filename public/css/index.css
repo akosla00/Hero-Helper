@@ -184,6 +184,24 @@ i.fly-in-out {
     text-align: center;
 }
 
+.user-request {
+    background-color: rgb(191, 235, 255);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+}
+
+/* Skyler styling */
+.card {
+    display: inline-block;
+    background-color: #095A7D;
+    color: #EBEBEB;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
 #headerFont {
     font-size: 45px;
 }

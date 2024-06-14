@@ -3,7 +3,7 @@ const { withAuth } = require('../../utils/Auth');
 
 const router = require('express').Router();
 
-router.route('/').post(heroController.add).get(heroController.all);
+router.route('/').post(withAuth, heroController.add).get(heroController.all);
 
 
 // router.route('/').post(withAuth, heroController.add);
