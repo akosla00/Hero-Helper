@@ -1,9 +1,11 @@
-<header>
+<header id="homeHeader">
     <nav class="container-fluid help">
         <ul>
-            <li><a href="/" id="home">Home</a></li>
-            <li><a href="/hero" id="hero">Heroes</a></li>
-            <li><a href="/about" id="about">About</a></li>
+            <li><a href="/" class="navFont">Home</a></li>
+            <li><a href="/hero" class="navFont">Heros</a></li>
+            <li><a href="/about" class="navFont">About</a></li>
+            <li><a href="/requests" class="navFont">Requests</a></li>
+            <li><a href="/profile" class="navFont">Profile</a></li>
         </ul>
         {{#if logged_in}}
         <a href="/logout"><button id="logout" type="button" class="btn btn-primary">Logout</button></a>

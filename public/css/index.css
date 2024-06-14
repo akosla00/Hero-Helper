@@ -6,7 +6,6 @@
     height: 100vh;
 }
 
-
 #login-flex {
     background: rgb(0, 170, 217);
     background: linear-gradient(190deg, rgba(0, 170, 217, 1) 0%, rgba(9, 90, 125, 1) 100%);
@@ -119,10 +118,10 @@ nav ul {
 }
 
 /* H1 Styles */
-#hr {
+#anime {
     display: inline-block;
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
     line-height: 3em;
     font-family: 'Syncopate', Helvetica, Arial;
 }
@@ -168,23 +167,22 @@ i.fly-in-out {
     }
 }
 
-/* Gio's profile page CSS BELOW */
-#main-background {
-    background-color: white;
-}
+/* Alec's Request Styling */
 
-
-
-#profile-image-container {
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
-}
-
-#profile-image-container img {
+.requestsContainer {
+    background-color: rgb(255, 165, 0);
     width: 100%;
+    height: 100vh;
 }
 
+#requestsHeader {
+    background-color: rgb(255, 165, 0);
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+}
 
 .user-request {
     background-color: rgb(191, 235, 255);
@@ -203,4 +201,26 @@ i.fly-in-out {
 .card img {
     height: 200px;
     object-fit: cover;
+}
+#headerFont {
+    font-size: 45px;
+}
+
+.requestsBox {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    font-family: Helvetica;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.loginHome {
+    font-family: "bebas neue";
+        font-size: 25px;
+        color: rgb(241, 241, 248);
+        transition: color 0.3s ease, transform 0.3s ease;
 }

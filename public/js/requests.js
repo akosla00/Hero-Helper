@@ -25,7 +25,7 @@ const requestForm = async (event) => {
 
     if (response.ok) {
         console.log('Created a new request! TEST');
-        // document.location.replace('/');
+        document.location.replace('/');
     } else {
         alert('Request failed');
     }
