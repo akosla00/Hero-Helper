@@ -192,3 +192,15 @@ i.fly-in-out {
     margin: 10px;
     border-radius: 12px;
 }
+
+/* Skyler styling */
+.card {
+    display: inline-block;
+    background-color: #095A7D;
+    color: #EBEBEB;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
