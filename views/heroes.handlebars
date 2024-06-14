@@ -4,9 +4,9 @@
     <img class="card-img-top" src="{{hero.img}}" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title">{{hero.heroName}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Power Level: {{hero.powerLevel}},</h6>
-        {{!-- <p class="card-text">{{hero.description}}</p>
-        <p class="card-text">{{hero.locationBase}}</p> --}}
+        <h6 class="card-subtitle mb-2 text-muted">Power Level: {{hero.powerLevel}}</h6>
+        {{!-- <p class="card-text">{{hero.description}}</p> --}}
+        <p class="card-text">{{hero.locationBase}}</p>
     </div>
     </div>
     {{/each}}
@@ -48,14 +48,6 @@
         <div class="mb-3">
             <label for="inputLocation" class="form-label">Based in what city?</label>
             <input type="text" class="form-control" id="inputLocation">
-        </div>
-        <div class="mb-3">
-            <label for="inputTravelSpeed">Select travel speed (as fast as a...)</label>
-            <select class="form-control" id="inputTravelSpeed">
-            <option>Foot</option>
-            <option>Car</option>
-            <option>Plane</option>
-            </select>
         </div>
         <hr>
         <button type="submit" class="btn btn-primary">Register</button>

@@ -5,7 +5,6 @@
             <li><a href="/heroes" class="navFont">Heroes</a></li>
             <li><a href="/about" class="navFont">About</a></li>
             <li><a href="/requests" class="navFont">Requests</a></li>
-            <li><a href="/profile" class="navFont">Profile</a></li>
         </ul>
         {{#if logged_in}}
         <a href="/logout"><button id="logout" type="button" class="btn btn-primary">Logout</button></a>
@@ -17,10 +16,13 @@
     <div class="request container">
         <main>
             <div class="content">
-             <h1 id="anime">Request Today Save Tomorrow</h1>
-          
+             <h1 id="anime"> Request Today  Save Tomorrow</h1>
+            </div>
+            <div>
+                <a href="/request"><button id="main-button" type="button" class="btn btn-primary">Request Now</button></a>
             </div>
         </main>
     </div>
 
 <script src="/js/scripts.js"></script>
+
