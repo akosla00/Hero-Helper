@@ -15,6 +15,10 @@ Heroes.init(
             type: DataTypes.STRING(30),
             allowNull: false,
         },
+        img: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
         firstName: {
             type: DataTypes.STRING(30),
             allowNull: true,
@@ -26,14 +30,6 @@ Heroes.init(
         description: {
             type: DataTypes.STRING(500),
             allowNull: false,
-        },
-        powersId: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-                model: 'powers',
-                key: 'id',
-            },
         },
         powerLevel: {
             type: DataTypes.STRING(1),
