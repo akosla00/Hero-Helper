@@ -1,14 +1,33 @@
+<header id="homeHeader">
+    <nav class="container-fluid help">
+        <ul>
+            <li><a href="/" class="navFont">Home</a></li>
+            <li><a href="/heroes" class="navFont">Heroes</a></li>
+            <li><a href="/about" class="navFont">About</a></li>
+            <li><a href="/requests" class="navFont">Requests</a></li>
+            <li><a href="/profile" class="navFont">Profile</a></li>
+        </ul>
+        {{#if logged_in}}
+        <a href="/logout"><button id="logout" type="button" class="btn btn-primary">Logout</button></a>
+        {{else}}
+        <a href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+        {{/if}}
+    </nav>
+</header>
+
 <div class="card-columns">
     {{#each mapHeroes as |hero|}}
+    <a href="/{{hero.id}}">
     <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="{{hero.img}}" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title">{{hero.heroName}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Power Level: {{hero.powerLevel}},</h6>
-        {{!-- <p class="card-text">{{hero.description}}</p>
-        <p class="card-text">{{hero.locationBase}}</p> --}}
+        <h6 class="card-subtitle mb-2 text-muted">Power Level: {{hero.powerLevel}}</h6>
+        {{!-- <p class="card-text">{{hero.description}}</p> --}}
+        <p class="card-text">{{hero.locationBase}}</p>
     </div>
     </div>
+    </a>
     {{/each}}
 </div>
 
@@ -48,14 +67,6 @@
         <div class="mb-3">
             <label for="inputLocation" class="form-label">Based in what city?</label>
             <input type="text" class="form-control" id="inputLocation">
-        </div>
-        <div class="mb-3">
-            <label for="inputTravelSpeed">Select travel speed (as fast as a...)</label>
-            <select class="form-control" id="inputTravelSpeed">
-            <option>Foot</option>
-            <option>Car</option>
-            <option>Plane</option>
-            </select>
         </div>
         <hr>
         <button type="submit" class="btn btn-primary">Register</button>

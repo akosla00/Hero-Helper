@@ -39,10 +39,6 @@ Heroes.init(
             type: DataTypes.STRING(50),
             allowNull: false,
         },
-        travelSpeed: {
-            type: DataTypes.STRING(10),
-            allowNull: false,
-        },
         registeredBy: {
             type: DataTypes.INTEGER,
             allowNull: true,

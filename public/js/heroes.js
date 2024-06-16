@@ -14,7 +14,6 @@ const heroRegistrationForm = async (event) => {
     const description = document.querySelector('#inputDescription').value.trim();
     const powerLevel = document.querySelector('#inputPowerLevel').value.trim();
     const location = document.querySelector('#inputLocation').value.trim();
-    const travelSpeed = document.querySelector('#inputTravelSpeed').value.trim();
     
     const newHero = {
         heroName: heroName,
@@ -24,7 +23,6 @@ const heroRegistrationForm = async (event) => {
         description: description,
         powerLevel: powerLevel,
         locationBase: location,
-        travelSpeed: travelSpeed
     }
 
     console.log(newHero);

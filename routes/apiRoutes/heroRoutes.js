@@ -5,7 +5,4 @@ const router = require('express').Router();
 
 router.route('/').post(withAuth, heroController.add).get(heroController.all);
 
-
-// router.route('/').post(withAuth, heroController.add);
-
 module.exports = router;

@@ -14,14 +14,19 @@
         {{/if}}
     </nav>
 </header>
-    <div class="request container">
-        <main>
-            <div class="content">
-             <h1 id="anime">Request Today Save Tomorrow</h1>
-
+<div id="profile-background" class="container ">
+    <div class="row">
+        <div class="col-4">
+            <div id="profile-image-container">
+                <img src="{{img}}" alt="">
             </div>
-        </main>
+        </div>
+        <div class="col">
+            <p>{{heroName}}</p>
+            <p>Power Level: {{powerLevel}}</p>
+            <p>{{description}}</p>
+            <p>{{locationBase}}</p>
+        </div>
     </div>
-
-<script src="/js/scripts.js"></script>
-
+    <a href="/map"><button type="button" class="btn btn-primary">Map</button></a>
+</div>
