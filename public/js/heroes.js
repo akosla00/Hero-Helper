@@ -26,6 +26,7 @@ const heroRegistrationForm = async (event) => {
     }
 
     console.log(newHero);
+    console.log(location)
 
     const response = await fetch('/api/hero', {
         method: 'POST',

@@ -14,22 +14,22 @@
         {{/if}}
     </nav>
 </header>
-<div id="main-background" class="container ">
+<div id="profile-background" class="container ">
     <div class="row">
         <div class="col-4">
             <div id="profile-image-container">
                 <img src="https://t3.ftcdn.net/jpg/03/58/90/78/360_F_358907879_Vdu96gF4XVhjCZxN2kCG0THTsSQi8IhT.jpg" alt="">
             </div>
         </div>
-        <div class="col">
-            <p>name goes here</p>
+        <div id="profile-info" class="col">
+            <p id="userName">{{cleanUserData.username}}</p>
             <p>About me</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium similique exercitationem quas veniam, consequatur vitae obcaecati culpa error dolores sunt, provident vel quae, alias ipsa odit labore sapiente libero deserunt?</p>
         </div>
     </div>
     <div class="row text-center">
         <div class="col">
-            <a href="/request"><button type="button" class="btn btn-primary">Request Now</button></a>
+            <a href="/requests"><button type="button" class="btn btn-primary">Request Now</button></a>
         </div>
         <div class="col">
             <h4>Requests: 2</h4>

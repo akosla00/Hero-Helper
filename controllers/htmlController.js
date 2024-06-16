@@ -26,7 +26,7 @@ module.exports = {
             if (nameA > nameB) {
               return 1;
             }
-          
+
             // names must be equal
             return 0;
           });
@@ -41,13 +41,18 @@ module.exports = {
 	},
 	profile: async (req, res) => {
         const userData = await Users.findByPk(req.session.user_id);
-        console.log(userData);
-        // const userRequest = await Requests.findOne({ where: { userId: userData.id } });
+        const cleanUserData = userData.get({ plain: true });
+        const userRequest = await Requests.findAll({ where: { userId: cleanUserData.id } });
         // console.log(userRequest);
-        // const requests = userRequest.map((post) => post.get({ plain: true }));
+        const requests = userRequest.map((post) => post.get({ plain: true }));
         // console.log(requests)
         // console.log(req.session.logged_in);
         // res.render('profile', { requests, logged_in: req.session.logged_in});
+        res.render('profile', {cleanUserData , requests}); 
+	},
+  about: (req, res) => {
+    res.render('about');
+  },
         res.render('profile'); 
 	},
     oneHero: async (req, res) => {
