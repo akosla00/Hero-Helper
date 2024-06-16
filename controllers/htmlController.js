@@ -50,11 +50,9 @@ module.exports = {
         // res.render('profile', { requests, logged_in: req.session.logged_in});
         res.render('profile', {cleanUserData , requests}); 
 	},
-  about: (req, res) => {
-    res.render('about');
-  },
-        res.render('profile'); 
-	},
+    about: (req, res) => {
+        res.render('about');
+    },
     oneHero: async (req, res) => {
         try {
             const heroData = await Heroes.findByPk(req.params.id);
