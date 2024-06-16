@@ -9,7 +9,7 @@ router.route('/requests').get(htmlContoller.requests);
 router.route('/heroes').get(withAuth, htmlContoller.heroes);
 router.route('/map').get(htmlContoller.map);
 router.route('/profile').get(withAuth, htmlContoller.profile);
-router.route('/hero/:id').get(withAuth, htmlContoller.oneHero);
+router.route('/:id').get(withAuth, htmlContoller.oneHero);
 router.route('/').get(htmlContoller.home);//landing page that will display your homepage
 
 module.exports = router;

@@ -18,41 +18,13 @@
     <div class="row">
         <div class="col-4">
             <div id="profile-image-container">
-                <img src="https://t3.ftcdn.net/jpg/03/58/90/78/360_F_358907879_Vdu96gF4XVhjCZxN2kCG0THTsSQi8IhT.jpg" alt="">
+                <img src="{{img}}" alt="">
             </div>
         </div>
         <div class="col">
-            <p>name goes here</p>
-            <p>About me</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium similique exercitationem quas veniam, consequatur vitae obcaecati culpa error dolores sunt, provident vel quae, alias ipsa odit labore sapiente libero deserunt?</p>
+            <p>{{heroName}}</p>
+            <p>Power Level: {{powerLevel}}</p>
+            <p>{{description}}</p>
+            <p>{{locationBase}}</p>
         </div>
     </div>
-    <div class="row text-center">
-        <div class="col">
-            <a href="/request"><button type="button" class="btn btn-primary">Request Now</button></a>
-        </div>
-        <div class="col">
-            <h4>Requests: 2</h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h2>Past request</h2>
-            {{#each requests}}
-            <div class="user-request">
-                <div>
-                    {{!-- title --}}
-                    <p>Request: {{title}}</p>
-                    {{!-- description --}}
-                    <h5>description</h5>
-                    <p>{{description}}</p>
-                    <p>Difficulty level: {{powerLevel}}</p>
-                    <p>Location: {{location}}</p>
-                    <p>Fullied by: N/A</p>
-                </div> 
-            </div>
-            {{/each}}
-            
-        </div>
-    </div>
-</div>
