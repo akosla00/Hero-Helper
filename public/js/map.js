@@ -187,13 +187,26 @@ function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 
+  // Update the dot's position on the map
+  if (map.getSource('point')) {
+    map.getSource('point').setData({
+      type: 'FeatureCollection',
+      features: [{
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: start
+        }
+      }]
+    });
+  }
+
   // Optionally, if you want to immediately update the route with the new start position
   // Ensure the map and its layers are fully loaded before calling this
   if (map.isStyleLoaded()) {
     getRoute(start); // This will now use the updated start position
   }
 }
-
 
 
 
