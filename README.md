@@ -24,9 +24,10 @@ Hero Helper is a web application designed to connect citizens with heroes. Users
 - **User Authentication**: User authentication is implemented 
 - **New Technologies**: The application incorporates The Map box api 
 
-## Installation Instructions
+## 
 
-(To be provided)
+  [Hero Helper Screenshot ](image.png)
+
 
 
 ## Contributors
@@ -37,5 +38,3 @@ Hero Helper is a web application designed to connect citizens with heroes. Users
 -  Alec Kosla
 
 ---
-
-Please provide the details for the sections labeled "To be provided," or let me know if there are any other sections you'd like to include.
