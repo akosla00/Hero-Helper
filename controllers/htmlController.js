@@ -15,6 +15,9 @@ module.exports = {
     signUp: (req, res) => {
         res.render('signUp');
     },
+    about: (req, res) => {
+        res.render('about');
+    },
     heroes: async (req, res) => {
         const heroes = await Heroes.findAll().catch((err) => res.json(err));
         heroes.sort((a, b) => {
@@ -50,9 +53,6 @@ module.exports = {
         // res.render('profile', { requests, logged_in: req.session.logged_in});
         res.render('profile', {cleanUserData , requests}); 
 	},
-    about: (req, res) => {
-        res.render('about');
-    },
     oneHero: async (req, res) => {
         try {
             const heroData = await Heroes.findByPk(req.params.id);
